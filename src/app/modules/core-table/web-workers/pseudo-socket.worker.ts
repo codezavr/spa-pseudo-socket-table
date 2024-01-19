@@ -1,12 +1,14 @@
 /// <reference lib="webworker" />
-function generateData(size: number): any[] {
+import { TableItems } from '../../../types';
+
+function generateData(size: number): TableItems {
   const data = [];
   for (let i = 0; i < size; i++) {
-    const id = i;
+    const id = i.toString();
     const int = Math.floor(Math.random() * 100000);
     const float = Math.random() * (10000 - 1) + 1;
     const color = getRandomColor();
-    const child = { id: i, color: getRandomColor() };
+    const child = { id: i.toString(), color: getRandomColor() };
     const element = { id, int, float, color, child };
     data.push(element);
   }

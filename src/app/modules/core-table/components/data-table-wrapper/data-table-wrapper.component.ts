@@ -20,9 +20,9 @@ export class DataTableWrapperComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.pseudoSocketService.getDataStream() // | async as dataStream
+    this.pseudoSocketService.getDataStream()
       .pipe(
-        takeUntil(this.destroyedSubject) // Change to pipe
+        takeUntil(this.destroyedSubject)
       )
       .subscribe((tableItems: TableItems) => {
         this.mainTableData = tableItems;

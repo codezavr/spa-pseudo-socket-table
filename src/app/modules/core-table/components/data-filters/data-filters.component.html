@@ -1,0 +1,17 @@
+<form [formGroup]="dataFiltersForm" (ngSubmit)="onSubmit()">
+  <section class="filters">
+    <div class="filter">
+      <label for="interval">Timer, ms</label>
+      <input id="interval" placeholder="ms" formControlName="interval" type="number" min="0" step="1000">
+    </div>
+    <div class="filter">
+      <label for="arraySize">Array size</label>
+      <input id="arraySize" placeholder="number" formControlName="arraySize" type="number">
+    </div>
+    <div class="filter">
+      <label for="additionalIds">Additional array ids</label>
+      <input id="additionalIds" placeholder="101, 102, 103" formControlName="additionalIds">
+    </div>
+  </section>
+</form>
+

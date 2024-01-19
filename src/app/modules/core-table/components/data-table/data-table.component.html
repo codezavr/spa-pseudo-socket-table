@@ -1,0 +1,16 @@
+<table *ngFor="let element of mainTableData;">
+  <tr>
+    <td>{{ element.id }}</td>
+    <td>{{ element.int }}</td>
+    <td>{{ element.float}}</td>
+    <td [style.background]="element.color">{{ element.color }}</td>
+    <td>
+      <table>
+        <tr>
+          <td>{{ element.child.id }}</td>
+          <td [style.background]="element.child.color">{{ element.child.color }}</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
